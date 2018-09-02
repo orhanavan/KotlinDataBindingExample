@@ -3,7 +3,7 @@ package com.kotlin.mydatabinding
 import android.databinding.BaseObservable
 import android.databinding.Bindable
 
-class StoryItem(name: String?, email: String?, url: String?) : BaseObservable() {
+class StoryItem(name: String?, email: String?, url1: String?, url2: String?) : BaseObservable() {
 
     var name: String? = name
         @Bindable
@@ -21,7 +21,8 @@ class StoryItem(name: String?, email: String?, url: String?) : BaseObservable() 
             notifyPropertyChanged(BR.email)
         }
 
-    var profileImageUrl: String? = url
+    var thumbnailImageUrl: String? = url1
+    var profileImageUrl: String? = url2
 
 
 

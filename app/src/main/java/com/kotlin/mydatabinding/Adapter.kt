@@ -8,7 +8,7 @@ import com.facebook.imagepipeline.request.ImageRequestBuilder
 class Adapter {
     companion object {
         @JvmStatic
-        @BindingAdapter("android:profileImage")
+        @BindingAdapter("android:Image")
         fun loadImage(view: SimpleDraweeView, url: String) {
             val imageURI: Uri = Uri.parse(url)
             val request = ImageRequestBuilder.newBuilderWithSource(imageURI).build()

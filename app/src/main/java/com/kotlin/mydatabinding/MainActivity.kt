@@ -19,10 +19,10 @@ class MainActivity : AppCompatActivity() {
 
         val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        val newStory = StoryItem("orhan", "avan", "https://via.placeholder.com/250x250")
+        val newStory = StoryItem("orhan", "avan", "https://via.placeholder.com/250/fd12ef/000000", "https://via.placeholder.com/250/aabbcc/000000")
         binding.story = newStory
 
-        val handlers= MyClickHandlers(this)
+        val handlers = MyClickHandlers(this)
         binding.handlers = handlers
 
     }

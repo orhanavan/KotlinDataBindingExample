@@ -36,12 +36,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="@{handlers.onButtonClicked}"
-            android:text="CLICK"/>
+            android:text="CLICK" />
 
-        <com.facebook.drawee.view.SimpleDraweeView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:profileImage="@{story.profileImageUrl}"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_thumbnail"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:Image="@{story.thumbnailImageUrl}"
+                app:roundAsCircle="true"/>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/sdv_thumbnail"
+                android:layout_alignEnd="@+id/sdv_thumbnail"
+                android:layout_alignRight="@id/sdv_thumbnail"
+                android:Image="@{story.profileImageUrl}"
+                app:roundAsCircle="true"/>
+        </RelativeLayout>
 
 
     </LinearLayout>
